@@ -1,0 +1,33 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+from django.utils.translation import gettext as _
+from django.urls import reverse
+from datetime import datetime
+from django.conf import settings
+import pytz
+from cms.djangoapps.contentstore.config.waffle import ENABLE_ACCESSIBILITY_POLICY_PAGE
+from openedx.core.djangolib.markup import HTML, Text
+%>
+<div class="wrapper-footer wrapper">
+  <footer class="primary" role="contentinfo">
+    <div class="footer-content-secondary" aria-label="${_("Legal")}">
+      <div class="footer-about-copyright">
+        ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
+        <p>
+          ## Translators: 'edX' and 'Open edX' are trademarks of 'edX Inc.'. Please do not translate any of these trademarks and company names.
+          ${Text(_("XNETZ registered trademarks of {link_start}XNETZ{link_end}")).format(
+            link_start=HTML(u"<a href='https://www.edx.org/'>"),
+            link_end=HTML(u"</a>")
+          )}
+        </p>
+      </div>
+
+      <div class="footer-about-openedx">
+        <a href="https://open.edx.org" title="${_("Powered by Open edX")}">
+          <img alt="${_("Powered by XNETZ")}" src="https://logos.openedx.org/open-edx-logo-tag.png">
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
