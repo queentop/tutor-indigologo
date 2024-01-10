@@ -5,7 +5,10 @@ section.home {
     padding: 0 15px;
 }
 .home>header .title {
-    background: none !important;
+    background-image: url('images/Background.png');
+    background-size: cover;
+    opacity: 0.5;
+    backgroun-position: center;
 }
 .global-header .nav-links .secondary {
     .btn-holder {
