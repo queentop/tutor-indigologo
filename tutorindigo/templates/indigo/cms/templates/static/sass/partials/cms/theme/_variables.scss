@@ -1,0 +1,12 @@
+// Theme colors
+//
+// Note: define colors needed by your theme first
+
+$primary: #48a5ae;
+$secondary: #a6ce39;
+
+// Theme fonts
+$font-family-sans-serif: cursive;
+
+// Initialize the Open edX Bootstrap theme
+@import 'edx-bootstrap/sass/open-edx/theme';
