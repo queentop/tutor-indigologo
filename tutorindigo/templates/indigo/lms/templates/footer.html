@@ -35,28 +35,18 @@
             </a>
           </li>
           <li>
-            <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
-              <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="79" />
+            <a href="$https://xecureit.id" rel="noopener" target="_blank">
+              <img src="${static.url('images/openedx-logo.png')}" alt="https://xecureit.id" width="79" />
             </a>
           </li>
         </ul>
         % endif
       </div>
-
-      % if INDIGO_FOOTER_NAV_LINKS:
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-          % for link in INDIGO_FOOTER_NAV_LINKS:
-            <li>
-              <a href="{{ link['url'] }}">{{ link['title'] }}</a>
-            </li>
-          % endfor
-        </ol>
-      </nav>
+      
+      <div class="">
+        <span class="copyright-site">Copyrights ©2023. All Rights Reserved.</span>
       </div>
-      <span class="copyright-site">Copyrights ©2023. All Rights Reserved.</span>
-      % endif
-
+    
       <div class="colophon">
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
           <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
@@ -103,27 +93,15 @@
           </li>
           <li>
             <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
-              <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="79" />
+              <img src="${static.url('images/openedx-logo.png')}" alt="https://xecureit.id" width="79" />
             </a>
           </li>
         </ul>
         % endif
       </div>
-
-      % if INDIGO_FOOTER_NAV_LINKS:
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-          % for link in INDIGO_FOOTER_NAV_LINKS:
-            <li>
-              <a href="{{ link['url'] }}">{{ link['title'] }}</a>
-            </li>
-          % endfor
-        </ol>
-      </nav>
-      </div>
+      <div class="">
       <span class="copyright-site">Copyrights ©2023. All Rights Reserved.</span>
-      % endif
-
+      </div>
       <div class="colophon">
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
           <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
