@@ -1,6 +1,21 @@
 ## Language-selection widget for the footer.
 ##
 ## Requires settings.LANGUAGE_COOKIE_NAME.
+{%<%page expression_filter="h"/>%}
+{#<%!#}
+  {#from babel import Locale#}
+  {#from django.conf import settings#}
+  {#from django.utils.translation import gettext as _#}
+
+  {#from openedx.core.djangoapps.lang_pref import COOKIE_DURATION#}
+  {#from openedx.core.djangoapps.lang_pref.api import released_languages#}
+  {#from openedx.core.djangolib.js_utils import js_escaped_string#}
+
+  {# Make sure LANGUAGE_COOKIE_NAME is present.#}
+  {#if not settings.LANGUAGE_COOKIE_NAME:#}
+      {#raise ValueError('settings.LANGUAGE_COOKIE_NAME is required to use footer-language-selector.')#}
+{#%>#}
+{%<%namespace name='static' file='../static_content.html'/>%}
 
 <div class="footer-language-selector">
     <div role="group" aria-label="Change page language">
