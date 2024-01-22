@@ -1,6 +1,7 @@
 ## Language-selection widget for the footer.
 ##
 ## Requires settings.LANGUAGE_COOKIE_NAME.
+  {% load static %}
 <%page expression_filter="h"/>
 <%!
   from babel import Locale
@@ -58,7 +59,7 @@
             var footer = document.getElementById('footer-language-select');
             var lang = footer.options[footer.selectedIndex].value;
             this.setLanguageCookie(lang, this.refreshPage);
-        },
+        };
 
         setLanguageCookie: function(value, callback) {
             var cookie = '${settings.LANGUAGE_COOKIE_NAME | n, js_escaped_string}=' + value + ';path=/';
@@ -74,10 +75,10 @@
             document.cookie = cookie;
 
             callback();
-        },
+        };
 
         refreshPage: function() {
             window.location.reload();
         }
-    };
+  };
 </script>
